@@ -1,0 +1,277 @@
+ <!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منظمة القاسم للعون الإنساني والتنمية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#4CAF50;
+  --green-dark:#2e7d32;
+  --bg:#f4fbf6;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Cairo',sans-serif;
+  direction:rtl;
+  background:var(--bg);
+  color:#333;
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:100vh;
+  background:url('images/hero.PNG') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,
+    rgba(76,175,80,.65),
+    rgba(0,0,0,.55));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+}
+
+.hero img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  background:#fff;
+  border:5px solid #fff;
+  margin-bottom:20px;
+  animation:logoFloat 6s ease-in-out infinite;
+}
+
+.hero h1{
+  font-size:40px;
+  margin:0;
+  animation:waveText 5s ease-in-out infinite;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:.95;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  color:var(--green-dark);
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+/* ===== ABOUT ===== */
+.about{
+  line-height:2;
+  font-size:18px;
+  text-align:justify;
+}
+
+/* ===== SERVICES ===== */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.service{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.4s;
+}
+
+.service:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(76,175,80,.35);
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:18px;
+  cursor:pointer;
+  transition:.4s;
+  animation:imgFloat 6s ease-in-out infinite;
+}
+
+.gallery img:hover{
+  transform:scale(1.08);
+  box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+
+/* ===== VIDEO ===== */
+video{
+  width:100%;
+  max-width:900px;
+  display:block;
+  margin:30px auto;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--green-dark);
+  color:#fff;
+  text-align:center;
+  padding:35px 15px;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  z-index:9999;
+}
+
+.lightbox img{
+  margin:auto;
+  display:block;
+  max-width:90%;
+  max-height:80%;
+  margin-top:60px;
+  border-radius:15px;
+}
+
+.lightbox span{
+  position:absolute;
+  top:20px;
+  left:30px;
+  font-size:45px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes logoFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+
+@keyframes waveText{
+  0%,100%{letter-spacing:0}
+  50%{letter-spacing:3px}
+}
+
+@keyframes imgFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <img src="images/logo.JPG">
+    <h1>منظمة القاسم للعون الإنساني والتنمية</h1>
+    <p>نساعد المجتمعات ونبني مستقبلًا أفضل</p>
+  </div>
+</div>
+
+<section>
+<h2>من نحن</h2>
+<div class="about">
+منظمة القاسم للعون الإنساني والتنمية منظمة طوعية غير ربحية ومستقلة تأسست عام 2011، تعمل في السودان – الخرطوم (الرياض)، وتهدف إلى دعم الفئات الأكثر ضعفًا، لا سيما الأسر النازحة والمجتمعات المهمشة، عبر برامج الإغاثة والتنمية المستدامة.
+</div>
+</section>
+
+<section>
+<h2>مجالات العمل</h2>
+<div class="services">
+  <div class="service">الإغاثة الإنسانية</div>
+  <div class="service">الأمن الغذائي</div>
+  <div class="service">التعليم</div>
+  <div class="service">الصحة</div>
+  <div class="service">المياه والإصحاح</div>
+  <div class="service">التمكين المجتمعي</div>
+</div>
+</section>
+
+<section>
+<h2>معرض الصور</h2>
+<div class="gallery">
+  <!-- كل صورك ستعمل -->
+  <script>
+    for(let i=1;i<=37;i++){
+      document.write(`<img src="images/gallery${i}.JPG" class="gimg">`);
+    }
+  </script>
+</div>
+</section>
+
+<section>
+<h2>فيديوهات</h2>
+<video controls src="videos/video1.mp4"></video>
+<video controls src="videos/video2.mp4"></video>
+<video controls src="videos/video3.mp4"></video>
+</section>
+
+<footer>
+📧 algasim.org@gmail.com | 📞 +249 91 955 3275  
+<br>© 2025 Algassim Organization
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span onclick="closeBox()">&times;</span>
+  <img id="lightboxImg">
+</div>
+
+<script>
+const imgs=document.querySelectorAll('.gimg');
+const box=document.getElementById('lightbox');
+const boxImg=document.getElementById('lightboxImg');
+
+imgs.forEach(img=>{
+  img.onclick=()=>{
+    box.style.display='block';
+    boxImg.src=img.src;
+  }
+});
+function closeBox(){box.style.display='none';}
+</script>
+
+</body>
+</html>
